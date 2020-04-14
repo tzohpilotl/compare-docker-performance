@@ -39,4 +39,5 @@ As of now, the report is only a formated output printed to the console; it has t
 ## To Do
 
 - [ ] Enable automatic Docker prunning
+- [ ] Enable passing a number of times to be run with the same parameters
 - [ ] Allow to test any script (decouple from Docker)
