@@ -1,0 +1,46 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test many files",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/index.js",
+      "args": ["single-stage", "multi-stage"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test all files",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/index.js",
+      "args": [
+        "single-stage",
+        "multi-stage",
+        "volumes-single-stage",
+        "volumes-multi-stage",
+        "recreate-node-modules"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test one files",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/index.js",
+      "args": ["multi-stage"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Create report",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/report.js",
+      "args": ["results/results.json"]
+    }
+  ]
+}

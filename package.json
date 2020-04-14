@@ -1,0 +1,29 @@
+{
+  "name": "compare-docker-performance",
+  "version": "1.0.0",
+  "description": "Comparison of different approaches to create the same docker image",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-report": "node report.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzohpilotl/compare-docker-performance.git"
+  },
+  "keywords": [
+    "docker",
+    "performance"
+  ],
+  "author": "Tzohpilotl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tzohpilotl/compare-docker-performance/issues"
+  },
+  "homepage": "https://github.com/tzohpilotl/compare-docker-performance#readme",
+  "dependencies": {
+    "ramda": "^0.27.0",
+    "strip-ansi": "^6.0.0"
+  }
+}

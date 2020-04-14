@@ -1,0 +1,45 @@
+version: '3.6'
+
+services:
+  single-stage:
+    network_mode: bridge
+    build:
+      context: .
+      dockerfile: docker/singleStage.Dockerfile
+
+  multi-stage:
+    network_mode: bridge
+    build:
+      context: .
+      dockerfile: docker/multiStage.Dockerfile
+      target: dev
+
+  volumes-multi-stage:
+    network_mode: bridge
+    build:
+      context: .
+      dockerfile: docker/usingVolumesMultiStage.Dockerfile
+      target: dev
+    volumes:
+      - ./app/node_modules
+      - ./app/src
+      - ./app/public
+
+  volumes-single-stage:
+    network_mode: bridge
+    build:
+      context: .
+      dockerfile: docker/usingVolumesSingleStage.Dockerfile
+    volumes:
+      - ./app/node_modules
+      - ./app/src
+      - ./app/public
+
+  recreate-node-modules:
+    network_mode: bridge
+    build:
+      context: .
+      dockerfile: docker/recreateNodeModules.Dockerfile
+    volumes:
+      - ./app/src
+      - ./app/public
